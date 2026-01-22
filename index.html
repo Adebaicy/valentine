@@ -1,17 +1,237 @@
-Dear Oluwaferanmi,
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valentine Letter</title>
 
-I came across the words above sometime in 2022 on book.poets Instagram’s page (https://www.instagram.com/p/B-6DmWXAsnD/?igsh=MTJlMnQ0cWNmM3VvYQ== ) and guess whose face immediately came to mind? You guessed right—you. I still lose control every time I see your smile. The first time I hugged you, I panicked as per, what do you mean you’re hugging a girl who served you breakfast before you resumed back to school but it is a way of letting you know that even if I was hurt then, you still matter to me and I love you.
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-For a long time, I’ve wanted to tell you “I love you” vocally and then run away without waiting for your response, simply out of anxiety about what you might say next. And yea, I know the weight those words carry and it is not in me to carelessly throw them around as I mean each and every letter and the spaces in between the words.
+    <!-- Optional: Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-Reflecting on Matthew 22:37, I once grappled with what it truly means to love God, but 1 John 2:5 helped me understand that loving God is shown through obedience and doing His will—it requires action in essence. In that same light, I promise to always put in the work that reflects the love I have for you. I am willing to devote the entirety of myself to you.
+    <style>
+      :root {
+        --ink: #1f2937;
+        --muted: #6b7280;
+        --paper: rgba(255, 255, 255, 0.88);
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+      }
 
-You are the person that comes to mind whenever I think of Proverbs 27:17. Thank you for being by my side all this while. Your happiness is my priority, and I pray daily for God’s strength to love you more and more. You hold a special place in my heart and I what I feel for you is genuine. I cherish you so much.
+      body {
+        min-height: 100vh;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 600px at 10% 10%, rgba(255, 110, 167, 0.25), transparent 55%),
+          radial-gradient(1000px 700px at 90% 20%, rgba(255, 70, 70, 0.20), transparent 55%),
+          radial-gradient(900px 650px at 50% 100%, rgba(255, 182, 193, 0.22), transparent 60%),
+          linear-gradient(135deg, #fff1f2 0%, #ffe4e6 35%, #fff7ed 100%);
+      }
 
-Forgive me if I may seem presumptuous, but one of my dreams is to see you wake up to handwritten love notes beneath your pillow or beside your lampstand. I truly see my future in you, and I pray for God’s leading and direction in all things.
+      .letter-shell {
+        max-width: 920px;
+      }
 
-Continue to steal my heart—it’s all yours. I love you, Oluwaferanmi Oluwabiyi ❤️
+      .letter-card {
+        background: var(--paper);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        overflow: hidden;
+      }
 
-Happy Valentine’s Day 💌
+      .letter-header {
+        position: relative;
+        padding: 2.25rem 2.25rem 1.75rem;
+        background:
+          radial-gradient(900px 250px at 20% 10%, rgba(255, 0, 102, 0.16), transparent 55%),
+          radial-gradient(700px 260px at 90% 0%, rgba(255, 99, 132, 0.14), transparent 55%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.35));
+        border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+      }
 
-With love, Your Admirer - Oluwapelumi (PhD in falling for Praise)
+      .badge-soft {
+        display: inline-flex;
+        gap: 0.5rem;
+        align-items: center;
+        padding: 0.5rem 0.85rem;
+        border-radius: 999px;
+        background: rgba(255, 0, 102, 0.08);
+        border: 1px solid rgba(255, 0, 102, 0.18);
+        color: #b42318;
+        font-weight: 600;
+      }
+
+      .letter-body {
+        padding: 2.25rem;
+      }
+
+      .dropcap:first-letter {
+        float: left;
+        font-size: 3.2rem;
+        line-height: 1;
+        padding-right: 0.5rem;
+        padding-top: 0.25rem;
+        font-weight: 700;
+        color: #be123c;
+      }
+
+      .quote-card {
+        border-radius: 18px;
+        border: 1px dashed rgba(190, 18, 60, 0.35);
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+      .signature {
+        border-top: 1px solid rgba(17, 24, 39, 0.08);
+        padding-top: 1.25rem;
+        margin-top: 1.5rem;
+      }
+
+      .footer-note {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .heart {
+        animation: pulse 1.25s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 0.95; }
+        50% { transform: scale(1.08); opacity: 1; }
+      }
+
+      /* Optional print style */
+      @media print {
+        body { background: #fff; }
+        .letter-card { box-shadow: none; background: #fff; }
+        .btn, .footer-note { display: none !important; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container py-5">
+      <div class="mx-auto letter-shell">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="badge-soft">
+            <i class="bi bi-envelope-heart"></i>
+            Valentine Letter
+          </div>
+
+          <!-- Optional buttons -->
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-danger" onclick="window.print()">
+              <i class="bi bi-printer"></i> Print
+            </button>
+            <a class="btn btn-sm btn-danger" href="#letter">
+              <i class="bi bi-heart-fill heart"></i> Read
+            </a>
+          </div>
+        </div>
+
+        <article id="letter" class="letter-card">
+          <header class="letter-header">
+            <div class="row g-3 align-items-end">
+              <div class="col-md-8">
+                <h1 class="display-6 fw-bold mb-2">Happy Valentine’s Day 💌</h1>
+                <p class="mb-0 text-secondary">
+                  A letter for <span class="fw-semibold">Oluwaferanmi</span>
+                </p>
+              </div>
+              <div class="col-md-4 text-md-end">
+                <div class="text-secondary small">From</div>
+                <div class="fw-semibold">Oluwapelumi</div>
+                <div class="text-secondary small">“PhD in falling for Praise”</div>
+              </div>
+            </div>
+          </header>
+
+          <section class="letter-body">
+            <p class="lead mb-4"><span class="fw-semibold">Dear Oluwaferanmi,</span></p>
+
+            <p class="dropcap">
+              I came across the words above sometime in 2022 on book.poets Instagram’s page
+              (<a href="https://www.instagram.com/p/B-6DmWXAsnD/?igsh=MTJlMnQ0cWNmM3VvYQ==" target="_blank" rel="noopener">link</a>)
+              and guess whose face immediately came to mind? You guessed right—you. I still lose control every time I see your smile.
+              The first time I hugged you, I panicked as per, what do you mean you’re hugging a girl who served you breakfast before you
+              resumed back to school but it is a way of letting you know that even if I was hurt then, you still matter to me and I love you.
+            </p>
+
+            <p>
+              For a long time, I’ve wanted to tell you “I love you” vocally and then run away without waiting for your response, simply out
+              of anxiety about what you might say next. And yea, I know the weight those words carry and it is not in me to carelessly throw
+              them around as I mean each and every letter and the spaces in between the words.
+            </p>
+
+            <div class="p-4 my-4 quote-card">
+              <div class="d-flex align-items-start gap-3">
+                <div class="fs-3 text-danger"><i class="bi bi-book"></i></div>
+                <div>
+                  <p class="mb-2">
+                    Reflecting on <span class="fw-semibold">Matthew 22:37</span>, I once grappled with what it truly means to love God, but
+                    <span class="fw-semibold">1 John 2:5</span> helped me understand that loving God is shown through obedience and doing His
+                    will—it requires action in essence.
+                  </p>
+                  <p class="mb-0">
+                    In that same light, I promise to always put in the work that reflects the love I have for you. I am willing to devote the
+                    entirety of myself to you.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              You are the person that comes to mind whenever I think of <span class="fw-semibold">Proverbs 27:17</span>. Thank you for being
+              by my side all this while. Your happiness is my priority, and I pray daily for God’s strength to love you more and more.
+              You hold a special place in my heart and I what I feel for you is genuine. I cherish you so much.
+            </p>
+
+            <p>
+              Forgive me if I may seem presumptuous, but one of my dreams is to see you wake up to handwritten love notes beneath your pillow
+              or beside your lampstand. I truly see my future in you, and I pray for God’s leading and direction in all things.
+            </p>
+
+            <p class="mb-4">
+              Continue to steal my heart—it’s all yours.
+              <br />
+              <span class="fw-semibold">I love you, Oluwaferanmi Oluwabiyi</span> <span aria-hidden="true">❤️</span>
+            </p>
+
+            <div class="signature">
+              <div class="row g-3 align-items-center">
+                <div class="col-md-8">
+                  <div class="fw-semibold">With love,</div>
+                  <div>Your Admirer - Oluwapelumi</div>
+                </div>
+                <div class="col-md-4 text-md-end">
+                  <span class="badge text-bg-danger rounded-pill px-3 py-2">
+                    <i class="bi bi-heart-fill heart"></i> Valentine’s Day
+                  </span>
+                </div>
+              </div>
+
+              <p class="footer-note mt-3 mb-0">
+                Tip: You can edit the names, add a photo, or change colors by adjusting the CSS variables at the top.
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+```
